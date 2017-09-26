@@ -4,7 +4,7 @@ class MenuListItem extends Component {
   render(){
     const topMenu = this.props.appetizers.map(item => {
       return(
-        <div key={item._id}>
+        <div key={item.dish}>
           {item.price} - {item.dish} - {item.description}
         </div>
       )
@@ -12,7 +12,7 @@ class MenuListItem extends Component {
 
     const midMenu = this.props.entrees.map(item2 => {
       return(
-        <div key={item2._id}>
+        <div key={item2.dish}>
           {item2.price} - {item2.dish} - {item2.description}
         </div>
       )
@@ -20,12 +20,12 @@ class MenuListItem extends Component {
 
     const bottomMenu = this.props.desserts.map(item3 => {
       return(
-        <div key={item3._id}>
+        <div key={item3.dish}>
           {item3.price} - {item3.dish} - {item3.description}
         </div>
       )
     })
-    
+
     return(
       <div>
         <h2>
